@@ -1,0 +1,38 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="min-h-screen bg-blue-600 flex justify-center items-center">
+	
+	<div class="py-12 px-12 bg-white rounded-2xl shadow-xl z-20">
+    <%= render "devise/shared/error_messages", resource: resource %>
+		<div>
+			<h1 class="text-3xl font-extralight text-center mb-4 cursor-pointer">Sign In to Your Account</h1>
+			<p class="text-center text-sm mb-8 font-normal text-gray-700 tracking-wide cursor-pointer">If you do not have an account please contact your administrator for an invite</p>
+		</div>
+		<div class="space-y-4">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "block text-sm py-3 px-4 rounded-lg w-full border outline-none focus:outline-none focus:border-blue-600", placeholder: "Email Address" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "block text-sm py-3 px-4 rounded-lg w-full border outline-none focus:outline-none focus:border-blue-600", placeholder: "Password" %>
+    </div>
+			<div class="flex flex-col flex-wrap place-items-center">
+        <%= f.submit "Sign In", class: "py-3 mt-3 w-64 text-xl text-white bg-blue-600 rounded-2xl cursor-pointer uppercase" %>
+        <br>
+        <% if devise_mapping.rememberable? %>
+          <%= f.label :remember_me, class: "inline-flex items-center mt-3 cursor-pointer" do %>
+            <%= f.check_box :remember_me, class: "form-checkbox h-5 w-5 text-blue-600 cursor-pointer" %>
+            <span class="ml-2 text-gray-700 cursor-pointer">Remember Me?</span>
+          <% end %>
+        <% end %>
+        <br>
+			</div>
+      <div class="flex items-center justify-center space-x-2">
+        <span class="h-px w-full bg-gray-300 mb-10"></span>
+      </div>
+      <div class="flex justify-between ">
+        <%= render "devise/shared/links" %>
+      </div>
+		</div>
+	</div>
+
+<% end %>
+
+
