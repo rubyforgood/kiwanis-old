@@ -1,0 +1,11 @@
+<%= button_to "logout", destroy_user_session_path, method: :delete  %>
+<%= javascript_include_tag "components/pages/Clubs/index", "data-turbo-track": "reload", defer: true %>
+<%= javascript_tag do %>
+  var clubs = <%= raw(@clubs.to_json) %>
+<% end %>
+<div id="clubs"></div>
+
+***
+ERB
+
+<%= @clubs.inspect %>

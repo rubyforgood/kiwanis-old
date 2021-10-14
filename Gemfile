@@ -7,8 +7,8 @@ gem "rails", "~> 7.0.0.alpha2"
 gem 'pg', '~> 1.2.3'
 gem "puma", "~> 5.0"
 gem "redis", "~> 4.0"
-
 gem 'devise', '~> 4.8.0'
+gem "react-rails", "~> 2.6.1"
 
 gem "sprockets-rails", ">= 2.0.0"
 gem "jsbundling-rails", "~> 0.1.0"
