@@ -3,7 +3,8 @@
   "private": false,
   "scripts": {
     "build": "./build.js",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.scss -o ./app/assets/builds/application.css"
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.scss -o ./app/assets/builds/application.css",
+    "build:sass": "sass --sourcemap=none --watch ./app/assets/stylesheets/"
   },
   "dependencies": {
     "@hotwired/turbo-rails": "^7.0.1",

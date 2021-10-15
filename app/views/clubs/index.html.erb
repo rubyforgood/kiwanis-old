@@ -1,4 +1,3 @@
-<%= button_to "logout", destroy_user_session_path, method: :delete  %>
 <%= javascript_include_tag "components/pages/Clubs/index", "data-turbo-track": "reload", defer: true %>
 <%= javascript_tag do %>
   var clubs = <%= raw(@clubs.to_json) %>
@@ -8,4 +7,10 @@
 ***
 ERB
 
-<%= @clubs.inspect %>
+<% @clubs.each do |club| %>
+
+  <%= link_to club_events_path(club) do %>
+    <%= club.name %>
+  <% end %>
+
+<% end %>

@@ -5,7 +5,7 @@ const domTarget = document.getElementById('dashboard')
 
 const Dashboard = () => {
   return (
-    <div>Hi</div>
+    <div>Dashboard</div>
   )
 }
 

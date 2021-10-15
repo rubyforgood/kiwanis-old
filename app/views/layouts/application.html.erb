@@ -6,10 +6,13 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/antd/4.17.0-alpha.6/antd.compact.min.css" %>
   </head>
 
   <body>
     <%= yield %>
-    <div id="bar"></div>
+    <% if signed_in? %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-button"  %>
+    <% end %>
   </body>
 </html>

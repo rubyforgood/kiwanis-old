@@ -1,0 +1,29 @@
+<%= javascript_include_tag "components/pages/Events/index", "data-turbo-track": "reload", defer: true %>
+<%= javascript_tag do %>
+  var events = <%= raw(@events.to_json) %>
+<% end %>
+<div id="events"></div>
+
+***
+ERB
+
+<%= link_to "New Event", new_club_event_path(@club) %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+  </tr>
+  <% @events.each do |event| %>
+    <tr>
+      <td>
+        <%= link_to club_event_path(@club, event) do %>
+          <%= event.title %>
+        <% end %>
+      </td>
+      <td><%= event.start_date %></td>
+      <td><%= event.end_date %></td>
+    </tr>
+  <% end %>
+</table>

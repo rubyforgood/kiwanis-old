@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
+import Navigation from "../../shared/MainNavigation"
 
 const domTarget = document.getElementById('clubs')
 
@@ -12,13 +13,12 @@ const Clubs = () => {
   
   if (!clubsData) {
     setClubsData(CLUBS_DATA)
-    debugger
+    // debugger
+    // {clubsData.map(club => <div>{club.name}</div>)}
   }
 
   return (
-    <div>Clubs
-    {clubsData.map(club => <div>{club.name}</div>)}
-    </div>
+    <><Navigation /><div>Clubs</div></>
   )
 }
 
