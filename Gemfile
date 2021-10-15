@@ -10,11 +10,14 @@ gem "redis", "~> 4.0"
 gem 'devise', '~> 4.8.0'
 gem "react-rails", "~> 2.6.1"
 
+gem "cssbundling-rails", ">= 0.1.0"
+gem "importmap-rails", ">= 0.3.4"
+gem "sassc-rails", "~> 2.1"
+
 gem "sprockets-rails", ">= 2.0.0"
 gem "jsbundling-rails", "~> 0.1.0"
 gem "turbo-rails", ">= 0.7.11"
 gem "stimulus-rails", ">= 0.4.0"
-gem "cssbundling-rails", ">= 0.1.0"
 gem "jbuilder", "~> 2.7"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
