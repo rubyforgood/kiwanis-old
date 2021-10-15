@@ -1,0 +1,14 @@
+<% if signed_in? %>
+  <%= link_to "Back to Admin", club_event_path(@club, @event) %>
+<% end %>
+
+<%= @event.title %>
+<br>
+<%= @event.start_date %>
+<br>
+<%= @event.end_date %>
+
+<br>
+
+
+
